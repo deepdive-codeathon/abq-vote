@@ -1,22 +1,42 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text } from 'react-native';
+import {View, StyleSheet, Text} from 'react-native';
+import MapView from 'react-native-maps';
 
 export default function MapScreen() {
-  return (
-    <ScrollView style={styles.container}>
-      <Text>This is the Map Screen</Text>
-    </ScrollView>
-  );
+    return (
+        <View style={styles.container}>
+            <MapView style={styles.map}
+                initialRegion={{
+                    latitude: 35.0844,
+                    longitude: -106.6504,
+                    latitudeDelta: 0.0922,
+                    longitudeDelta: 0.0421,
+                }}
+            />
+        </View>
+
+    );
 }
 
 MapScreen.navigationOptions = {
-  title: 'Map',
+    title: 'Map',
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 15,
-    backgroundColor: '#fff',
-  },
+    container: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+    },
+    map: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+    },
 });
