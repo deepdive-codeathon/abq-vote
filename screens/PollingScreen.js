@@ -4,7 +4,7 @@ import { ScrollView, StyleSheet, Text } from 'react-native';
 export default function PollingScreen() {
   return (
     <ScrollView style={styles.container}>
-      <Text>This is the Polling Screen</Text>
+      <Text>This is the Check-In Screen</Text>
     </ScrollView>
   );
 }
