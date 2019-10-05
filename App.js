@@ -6,6 +6,7 @@ import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 import AppNavigator from './navigation/AppNavigator';
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
