@@ -6,6 +6,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import UserScreen from '../screens/UserScreen';
 import MapScreen from '../screens/MapScreen';
 import PollingScreen from '../screens/PollingScreen';
+import {FontAwesome, MaterialIcons} from '@expo/vector-icons';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -19,17 +20,24 @@ const HomeStack = createStackNavigator(
   config
 );
 
+// HomeStack.navigationOptions = {
+//   tabBarLabel: 'User',
+//   tabBarIcon: ({ focused }) => (
+//     <TabBarIcon
+//       focused={focused}
+//       name={
+//         Platform.OS === 'ios'
+//           ? `ios-information-circle${focused ? '' : '-outline'}`
+//           : 'md-information-circle'
+//       }
+//     />
+//   ),
+// };
+
 HomeStack.navigationOptions = {
-  tabBarLabel: 'Find Locations',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
-      }
-    />
+  tabBarLabel: 'User',
+  tabBarIcon: () => (
+      <FontAwesome style={{fontSize:28}} name="user"/>
   ),
 };
 
@@ -43,9 +51,9 @@ const LinksStack = createStackNavigator(
 );
 
 LinksStack.navigationOptions = {
-  tabBarLabel: 'Poll',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
+  tabBarLabel: 'Map',
+  tabBarIcon: () => (
+      <FontAwesome style={{fontSize:22}} name="map"/>
   ),
 };
 
@@ -59,9 +67,9 @@ const SettingsStack = createStackNavigator(
 );
 
 SettingsStack.navigationOptions = {
-  tabBarLabel: 'Candidate Information',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
+  tabBarLabel: 'Poll',
+  tabBarIcon: () => (
+      <MaterialIcons style={{fontSize:28}} name="poll"/>
   ),
 };
 
@@ -74,5 +82,6 @@ const tabNavigator = createBottomTabNavigator({
 });
 
 tabNavigator.path = '';
+
 
 export default tabNavigator;
