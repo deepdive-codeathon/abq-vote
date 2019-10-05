@@ -2,11 +2,10 @@ import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
-import TabBarIcon from '../components/TabBarIcon';
 import UserScreen from '../screens/UserScreen';
 import MapScreen from '../screens/MapScreen';
 import PollingScreen from '../screens/PollingScreen';
-import {FontAwesome, MaterialIcons} from '@expo/vector-icons';
+import {FontAwesome} from '@expo/vector-icons';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -67,9 +66,9 @@ const SettingsStack = createStackNavigator(
 );
 
 SettingsStack.navigationOptions = {
-  tabBarLabel: 'Poll',
+  tabBarLabel: 'Check-In',
   tabBarIcon: () => (
-      <MaterialIcons style={{fontSize:28}} name="poll"/>
+      <FontAwesome style={{fontSize:28}} name="check-circle"/>
   ),
 };
 
