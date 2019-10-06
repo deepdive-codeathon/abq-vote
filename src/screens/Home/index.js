@@ -42,14 +42,7 @@ MainScreen.navigationOptions = ({navigation, screenProps}) => {
       NavigationStyles.headerTitle,
       {color: theme.colors.headerTitle},
     ],
-    headerLeft: (
-      <View style={{marginLeft: 10}}>
-        <HeaderButton
-          icon="ios-menu"
-          onPress={navigation.getParam('openDrawer', null)}
-        />
-      </View>
-    ),
+    
   };
 };
 
