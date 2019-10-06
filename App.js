@@ -25,7 +25,6 @@ import useTranslation from './i18n';
 //create the easy store
 const store = createStore();
 
-
 const ThemeConsumer = props => {
   const {theme} = useTheme();
   const {t} = useTranslation();
@@ -115,7 +114,6 @@ function handleFinishLoading(setLoadingComplete) {
 //     </Screen>
 //   );
 // };
-
 
 //temp workaround for react-native-gesture-handler in react-native 0.61
 // take a look https://github.com/react-native-community/releases/issues/140#issuecomment-532819601
