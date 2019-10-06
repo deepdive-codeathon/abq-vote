@@ -5,13 +5,15 @@ import fetchVotingLocations from '../apis/fetchVotingLocations'
 
 export default class MapScreen extends React.Component {
 
-    constructor(props) {
+    constructor(props) { 
         super(props);
         this.state = {
-            viewingRegion: {latitude: 35.0844,
+            viewingRegion: {
+                latitude: 35.0844,
                 longitude: -106.6504,
                 latitudeDelta: 0.0922,
-                longitudeDelta: 0.0421,},
+                longitudeDelta: 0.0421,
+            },
             locations: [],
             test: '',
         }
@@ -27,19 +29,20 @@ export default class MapScreen extends React.Component {
         markers = []
         for (let i = 0; i < locations.length; i++) {
             markers.push(
-            <Marker
-                key={i}
-                coordinate={{
-                    latitude: locations[i]["geometry"]["y"],
-                    longitude: locations[i]["geometry"]["x"]}}
-                title={locations[i]["attributes"]["name"]}/>)
+                <Marker
+                    key={i}
+                    coordinate={{
+                        latitude: locations[i]["geometry"]["y"],
+                        longitude: locations[i]["geometry"]["x"]}}
+                    title={locations[i]["attributes"]["name"]}
+                />)
         }
         return markers;
     }
 
     render() {
-    let locations = this.state.locations
-    return (
+        let locations = this.state.locations
+        return (
             <MapView style={styles.map}
             initialRegion={this.state.viewingRegion}>
             {this.populateMapMarkers(locations)}
