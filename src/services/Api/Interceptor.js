@@ -1,4 +1,4 @@
-// import {getLoginCredentials, setLoginCredentials} from '../Keychain';
+import {getLoginCredentials, setLoginCredentials} from '../Keychain';
 import useStorage from '../AsyncStorage';
 import {URIS} from './index';
 
@@ -20,7 +20,7 @@ export default api => {
         console.log('LOG_status_401_error', '-> refreshing now ');
         originalRequest._retry = true;
         //get refresh token
-        const credentials = await useStorage("uuid");
+        const credentials = await useStorage('uuid');
 
         if (credentials) {
           const {refresh_token} = credentials;
@@ -37,11 +37,9 @@ export default api => {
                 'Authorization',
                 'Bearer ' + response.data.access_token,
               );
-              originalRequest.headers['Authorization'] =
+              originalRequest.headers.Authorization =
                 'Bearer ' + response.data.access_token;
-              // await setLoginCredentials(
-              // 	JSON.stringify(response.data)
-              // );
+              await setLoginCredentials(JSON.stringify(response.data));
               resolve(api.axiosInstance(originalRequest));
             } else {
               return Promise.resolve(error);

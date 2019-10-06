@@ -26,7 +26,7 @@ export const AppContextProvider = props => {
 
   const logout = useCallback(() => {
     Alert.alert(
-      'Please comfirm Logout',
+      'Please confirm Logout',
       'Are you sure you want to logout from the app',
       [
         {

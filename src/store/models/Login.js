@@ -42,8 +42,8 @@ const loginUser = thunk(async (actions, payload, {dispatch}) => {
     }
   }, 1000);
 
-  // 	ApiService.setAuthorizationHeader(response.data.access_token);
-  // 	dispatch.user.requestUserProfile();
+  ApiService.setAuthorizationHeader(response.data.access_token);
+  dispatch.user.requestUserProfile();
 });
 
 const LoginModel = {

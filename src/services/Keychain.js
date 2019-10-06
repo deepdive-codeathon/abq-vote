@@ -5,36 +5,25 @@ import {CryptoDigestAlgorithm, CryptoEncoding} from 'expo-crypto';
 import createSecureStore from '@neverdull-agency/expo-unlimited-secure-store';
 //@flow
 
-// Keychain Access
-// export const setLoginCredentials = async (field1, field2) => {
-//   try {
-//     const response = await Keychain.setGenericPassword(field1, field2);
-//     console.log('keychain data securely set  ', response);
-//     return {status: true, response};
-//   } catch (e) {
-//     console.log('keychain access failed ', e);
-//     return {status: false, error: e};
-//   }
-// };
-
 export const setLoginCredentials = async (key, value, user) => {
-  try {
-    // 1. Stringy the value, expo-secure-store setItemAsycn only accepts a singlestring value
-    let string = JSON.stringify(value + user);
-    const digest = await Crypto.digestStringAsync(
-      CryptoDigestAlgorithm.SHA256,
-      string,
-      {
-        encoding: CryptoEncoding.HEX,
-      },
-    );
+  if (key === 'uuid')
+    {try {
+      // 1. Stringy the value, expo-secure-store setItem only accepts a single string value
+      let string = JSON.stringify(value + user);
+      const digest = await Crypto.digestStringAsync(
+        CryptoDigestAlgorithm.SHA256,
+        string,
+        {
+          encoding: CryptoEncoding.HEX,
+        },
+      );
 
-    // 2. Save the item into storage
-    await createSecureStore.setItem(key, string);
-  } catch (e) {
-    console.log('Secure Store Key access: set login failed ', e);
-    return {status: false, error: e};
-  }
+      // 2. Save the item into storage
+      await createSecureStore.setItem(key, string);
+    } catch (e) {
+      console.log('Secure Store Key access: set login failed ', e);
+      return {status: false, error: e};
+    }}
 };
 export const getLoginCredentials = async key => {
   try {

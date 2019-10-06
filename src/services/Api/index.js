@@ -7,7 +7,7 @@ import * as Crypto from 'expo-crypto';
 // Will be hidden in prod as an .env variable
 export const URIS = {
   REGISTER: 'register/',
-  LOGIN: 'login/user/',
+  LOGIN: 'login/',
   LOGOUT: 'logout/',
 };
 
@@ -30,8 +30,8 @@ const createApiClient = (baseURL = BASE_URL) => {
     api.setHeader('Authorization', 'Bearer ' + access_token);
 
   const loginUser = payload => api.post(URIS.LOGIN, payload);
-
-
+  const logoutUser = payload => api.get(URIS.LOGOUT, payload);
+  const registerUser = payload => api.post(URIS.REGISTER, payload);
 
   //kickoff our api functions
   return {

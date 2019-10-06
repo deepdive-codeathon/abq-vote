@@ -89,7 +89,7 @@ export default () => {
             onSubmitEditing={onSubmit}
             onChangeText={text =>
               onChange({
-                key: 'username',
+                key: 'user',
                 value: text,
               })
             }

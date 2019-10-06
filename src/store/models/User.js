@@ -1,10 +1,10 @@
 import {action, thunk} from 'easy-peasy';
 import {ApiService} from '../index';
-// import {
-//   setLoginCredentials,
-//   getLoginCredentials,
-//   resetLoginCredentials,
-// } from '../../services/Keychain'
+import {
+  setLoginCredentials,
+  getLoginCredentials,
+  resetLoginCredentials,
+} from '../../services/Keychain';
 import useStorage from '../../services/AsyncStorage';
 import {STATUS} from '../../constants';
 import {APP_STATE} from '../../constants/index';
