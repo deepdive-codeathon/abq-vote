@@ -14,8 +14,6 @@ import {AppContextProvider} from './services/Auth/AppContext';
 
 import {Screen} from './components';
 import useTheme from './themes/Context';
-import useTranslation from './i18n';
-// import {gestureHandlerRootHOC} from 'react-native-gesture-handler';
 //create the easy store
 const store = createStore();
 
@@ -35,14 +33,13 @@ const Root = () => {
 
 const ThemeConsumer = props => {
   const {theme} = useTheme();
-  const {t} = useTranslation();
 
   return (
     <PaperProvider theme={theme}>
       <AppContextProvider>
         <PrimaryNav
           uriPrefix={APP_PREFIX}
-          screenProps={{theme, t}}
+          screenProps={{theme}}
           ref={nav => NavigationService.setTopLevelNavigator(nav)}
         />
       </AppContextProvider>
@@ -50,6 +47,4 @@ const ThemeConsumer = props => {
   );
 };
 
-//temp workaround for react-native-gesture-handler in react-native 0.61
-// take a look https://github.com/react-native-community/releases/issues/140#issuecomment-532819601
 export default Root;
