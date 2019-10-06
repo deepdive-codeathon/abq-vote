@@ -16,11 +16,9 @@ import useTheme from '../../themes/Context';
 import useAuth from '../../services/Auth';
 import {showInfoToast} from '../../lib/Toast';
 import BottomPanel from '../../components/Panel';
-import useTranslation from '../../i18n';
 
 export default () => {
   const onChange = useStoreActions(actions => actions.login.onLoginInputChange);
-  const {t} = useTranslation();
   const {login} = useAuth();
   const {theme} = useTheme();
 
