@@ -5,8 +5,29 @@ import {
   View,
   Image,
 } from 'react-native';
+import loginUser from '../apis/loginUser';
 
 export default class UserScreen extends Component {
+
+  constructor(props) {
+    super(props)
+
+    const TEST_SESSION_UUID = "07f1c619-9d08-45c5-86f7-7ab7524b5645"
+  
+    this.state = {
+      sessionUUID : TEST_SESSION_UUID,
+    }
+  }
+
+  fetchSessionUUID() {
+    loginUser().then(response => response.json()
+    .then(jsonData => this.setState({sessionUUID: jsonData["uuid"]}))
+    , fail=>console.log(fail))
+  }
+
+  componentDidMount() {
+    this.fetchSessionUUID()    
+  }
 
   render() {
     return (
