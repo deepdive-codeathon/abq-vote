@@ -12,7 +12,7 @@ const theme = {
     background: colors.issabeline,
     text: colors.panegrey,
     placeholder: colors.ashgrey,
-    header: colors.deepkamaru,
+    header: colors.tiffanyBlue,
     headerTitle: colors.white,
 
     //react-native-paper theme colors

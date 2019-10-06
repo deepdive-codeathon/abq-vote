@@ -1,25 +1,3 @@
-// /**
-//  * @format
-//  */
-
-// import {AppRegistry} from 'react-native';
-// import Root from './src/src';
-// import {YellowBox} from 'react-native';
-// // import App from "./src605";
-
-// import {name as appName} from './src/app.json';
-
-// YellowBox.ignoreWarnings([
-//   'Require cycle:',
-//   'Remote debugger',
-//   'Accessing view manager configs',
-//   'Warning: componentWillReceiveProps',
-//   'Warning: componentWillMount',
-// ]);
-
-// // import "./debugmodules";
-// console.ignoredYellowBox = ['Require cycle: node_modules/react-native-paper'];
-// AppRegistry.registerComponent(appName, () => App);
 import React from 'react';
 import {StatusBar} from 'react-native';
 import {StoreProvider} from 'easy-peasy';

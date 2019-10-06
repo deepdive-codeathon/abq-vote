@@ -12,16 +12,6 @@ const MainScreen = ({navigation}) => {
   const {logout} = useAuth();
   const {theme} = useTheme();
 
-  const {t, localeProvider, changeLocale} = useTranslation();
-
-  const _changeLocale = useCallback(() => {
-    changeLocale(
-      localeProvider.id == LOCALES.ENGLISH.id
-        ? LOCALES.ENGLISH
-        : LOCALES.SPANISH,
-    );
-  }, [changeLocale, localeProvider.id]);
-
   return (
     <LoadingActionContainer fixed>
       <Container
