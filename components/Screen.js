@@ -1,4 +1,4 @@
-import React from 'react';
+import React from './node_modules/react';
 import viewStyles from '../Styles/ViewStyles';
 import ViewX from './View';
 import colors from '../Themes/Colors';

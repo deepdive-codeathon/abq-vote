@@ -1,5 +1,5 @@
 import Login from '../Screens/Login';
-import {createStackNavigator} from 'react-navigation-stack';
+import {createStackNavigator} from './node_modules/react-navigation-stack';
 import Routes from './Routes';
 import AppIntro from '../Screens/AppIntro';
 

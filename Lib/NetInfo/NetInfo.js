@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import NetInfo from "@react-native-community/netinfo";
+import React, { useEffect, useState } from "./node_modules/react";
+import NetInfo from "./node_modules/@react-native-community/netinfo";
 
 const inititalState = {
   type: null,

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from './node_modules/react';
 import {InteractionManager} from 'react-native';
 import {
   TouchableNativeFeedback,
   TouchableOpacity,
-} from 'react-native-gesture-handler';
+} from './node_modules/react-native-gesture-handler';
 import {isAndroid} from '../Constants';
 import useTheme from '../Themes/Context';
 

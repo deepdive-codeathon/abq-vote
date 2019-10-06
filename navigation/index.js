@@ -1,5 +1,5 @@
-import {NavigationActions, StackActions} from 'react-navigation';
-import {DrawerActions} from 'react-navigation-drawer';
+import {NavigationActions, StackActions} from './node_modules/react-navigation';
+import {DrawerActions} from './node_modules/react-navigation-drawer';
 import Routes from './Routes';
 
 export {Routes};

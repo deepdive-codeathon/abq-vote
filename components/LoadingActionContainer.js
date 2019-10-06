@@ -1,6 +1,6 @@
-import React from "react";
+import React from "./node_modules/react";
 import { ScrollView, RefreshControl } from "react-native";
-import { Container } from "../Components";
+import { Container } from ".";
 
 export default ({
 	onRefresh,

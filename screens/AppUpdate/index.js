@@ -1,6 +1,6 @@
-import React, {useContext} from 'react';
+import React, {useContext} from './node_modules/react';
 import {View, Text, StatusBar} from 'react-native';
-import {Button} from 'react-native-paper';
+import {Button} from './node_modules/react-native-paper';
 import AppStateContext from '../../Services/Auth/AppContext';
 import LoadingActionContainer from '../../Components/LoadingActionContainer';
 import {Container} from '../../Components';

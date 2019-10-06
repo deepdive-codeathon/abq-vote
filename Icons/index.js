@@ -1,15 +1,15 @@
-import React from "react";
+import React from "./node_modules/react";
 
-import Ionicons from "react-native-vector-icons/Ionicons";
-import Entypo from "react-native-vector-icons/Entypo";
-import Octicons from "react-native-vector-icons/Octicons";
-import AntDesign from "react-native-vector-icons/AntDesign";
-import MaterialIcons from "react-native-vector-icons/MaterialIcons";
-import Feather from "react-native-vector-icons/Feather";
-import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
-import FontAwesome from "react-native-vector-icons/FontAwesome";
-import EvilIcons from "react-native-vector-icons/EvilIcons";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import Ionicons from "./node_modules/react-native-vector-icons/Ionicons";
+import Entypo from "./node_modules/react-native-vector-icons/Entypo";
+import Octicons from "./node_modules/react-native-vector-icons/Octicons";
+import AntDesign from "./node_modules/react-native-vector-icons/AntDesign";
+import MaterialIcons from "./node_modules/react-native-vector-icons/MaterialIcons";
+import Feather from "./node_modules/react-native-vector-icons/Feather";
+import FontAwesome5 from "./node_modules/react-native-vector-icons/FontAwesome5";
+import FontAwesome from "./node_modules/react-native-vector-icons/FontAwesome";
+import EvilIcons from "./node_modules/react-native-vector-icons/EvilIcons";
+import MaterialCommunityIcons from "./node_modules/react-native-vector-icons/MaterialCommunityIcons";
 
 export const ICON_TYPE = {
 	ICONICONS: "ionicons",

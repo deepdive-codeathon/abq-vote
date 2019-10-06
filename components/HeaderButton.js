@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
+import React from './node_modules/react';
 import {TouchableX} from '.';
 import {View} from 'react-native';
 import {IconX, ICON_TYPE} from '../Icons';

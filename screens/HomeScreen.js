@@ -1,5 +1,5 @@
-import * as WebBrowser from 'expo-web-browser';
-import React from 'react';
+import * as WebBrowser from './node_modules/expo-web-browser';
+import React from './node_modules/react';
 import {
   Image,
   Platform,
@@ -11,7 +11,7 @@ import {
   Dimensions,
 } from 'react-native';
 
-import { MonoText } from '../components/StyledText';
+import { MonoText } from '../Components/StyledText';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 
 export default function HomeScreen() {
@@ -27,7 +27,7 @@ export default function HomeScreen() {
          longitudeDelta: 0.0121,
        }}
      >
-     </MapView> 
+     </MapView>
 
       </View>
   );

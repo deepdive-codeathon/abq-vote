@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useRef} from 'react';
+import React, {useRef} from './node_modules/react';
 import {Text, Keyboard} from 'react-native';
-import {useStoreState, useStoreActions} from 'easy-peasy';
+import {useStoreState, useStoreActions} from './node_modules/easy-peasy';
 import {STATUS} from '../../Constants';
 import LoadingActionContainer from '../../Components/LoadingActionContainer';
 import {

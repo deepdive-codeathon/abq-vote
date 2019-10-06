@@ -1,4 +1,4 @@
-import {createDrawerNavigator} from 'react-navigation-drawer';
+import {createDrawerNavigator} from './node_modules/react-navigation-drawer';
 import Routes from '../Routes';
 import metrics from '../../Themes/Metrics';
 import MainStack from './MainStack';

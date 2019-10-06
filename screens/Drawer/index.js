@@ -1,8 +1,8 @@
-import React from 'react';
+import React from './node_modules/react';
 import {Container, Section} from '../../Components';
 import {Text, ScrollView} from 'react-native';
 import viewStyles from '../../Styles/ViewStyles';
-import {DrawerItems, SafeAreaView} from 'react-navigation';
+import {DrawerItems, SafeAreaView} from './node_modules/react-navigation';
 
 const Drawer = props => {
   return (

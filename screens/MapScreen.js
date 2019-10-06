@@ -1,4 +1,4 @@
-import React from 'react';
+import React from './node_modules/react';
 import {View, StyleSheet, Text} from 'react-native';
 import MapView from 'react-native-maps';
 

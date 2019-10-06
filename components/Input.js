@@ -1,6 +1,6 @@
-import React, {useImperativeHandle, forwardRef, useState, useRef} from 'react';
+import React, {useImperativeHandle, forwardRef, useState, useRef} from './node_modules/react';
 
-import {TextInput, Button} from 'react-native-paper';
+import {TextInput, Button} from './node_modules/react-native-paper';
 import {View} from 'react-native';
 import {TouchableOpacity} from 'react-native';
 import {IconX} from '../Icons';

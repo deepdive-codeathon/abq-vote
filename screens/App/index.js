@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useEffect, useCallback} from 'react';
+import React, {useEffect, useCallback} from './node_modules/react';
 import {Text} from 'react-native';
 import LoadingActionContainer from '../../Components/LoadingActionContainer';
 import {Container, ButtonX} from '../../Components';

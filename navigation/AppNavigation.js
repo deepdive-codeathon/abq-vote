@@ -1,8 +1,8 @@
-import {createAppContainer} from 'react-navigation';
-import {createStackNavigator} from 'react-navigation-stack';
-import createAnimatedSwitchNavigator from 'react-navigation-animated-switch';
-import {Transition} from 'react-native-reanimated';
-import React from 'react';
+import {createAppContainer} from './node_modules/react-navigation';
+import {createStackNavigator} from './node_modules/react-navigation-stack';
+import createAnimatedSwitchNavigator from './node_modules/react-navigation-animated-switch';
+import {Transition} from './node_modules/react-native-reanimated';
+import React from './node_modules/react';
 import Routes from './Routes';
 import LaunchScreen from '../Screens/Launch';
 // Screens Objects

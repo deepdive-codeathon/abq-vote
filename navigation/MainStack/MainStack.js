@@ -1,4 +1,4 @@
-import {createStackNavigator} from 'react-navigation-stack';
+import {createStackNavigator} from './node_modules/react-navigation-stack';
 import BottomTabStack from './BottomStack';
 import Routes from '../Routes';
 

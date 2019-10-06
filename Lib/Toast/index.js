@@ -1,5 +1,5 @@
-import React from 'react';
-import Toast from 'react-native-tiny-toast';
+import React from './node_modules/react';
+import Toast from './node_modules/react-native-tiny-toast';
 import colors from '../../Themes/Colors';
 
 let toast;

@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
+import React from './node_modules/react';
 import {Text, ActivityIndicator} from 'react-native';
 import colors from '../../Themes/Colors';
 import {Container} from '../../Components';

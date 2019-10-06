@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
+import React from './node_modules/react';
 import {StyleSheet, StatusBar} from 'react-native';
 import {View, Image, Text} from 'react-native';
 import {Container, ButtonX} from '../../Components';
@@ -64,7 +64,7 @@ const slides = [
     key: 'And some final notes',
     title: 'FINAL SLIDE',
     text: "I'm already out of descriptions\n\nLorem ipsum bla bla bla",
-    //   image: require('./assets/3.jpg'),
+    //   image: require('./Assets/3.jpg'),
     backgroundColor: colors.androidGreen,
   },
 ];

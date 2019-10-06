@@ -1,8 +1,8 @@
 /* @flow */
 
-import * as React from 'react';
-import { BottomNavigation } from 'react-native-paper';
-import { createTabNavigator, type InjectedProps } from 'react-navigation-tabs';
+import * as React from './node_modules/react';
+import { BottomNavigation } from './node_modules/react-native-paper';
+import { createTabNavigator, type InjectedProps } from './node_modules/react-navigation-tabs';
 
 type Props = InjectedProps & {
   activeTintColor?: string,
@@ -52,7 +52,7 @@ class BottomNavigationView extends React.Component<Props> {
        tabBarComponent({
             ...rest,
             activeColor:activeTintColor,
-            inactiveColor:inactiveTintColor,        
+            inactiveColor:inactiveTintColor,
             renderIcon:this._renderIcon,
             barStyle:[barStyle, extraStyle],
             navigationState:navigation.state,

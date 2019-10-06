@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
-import {createStackNavigator} from 'react-navigation-stack';
-import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs';
+import React from './node_modules/react';
+import {createStackNavigator} from './node_modules/react-navigation-stack';
+import {createMaterialBottomTabNavigator} from './node_modules/react-navigation-material-bottom-tabs';
 
 import Routes from '../Routes/index';
 import Home from '../../Screens/Home';

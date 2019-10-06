@@ -1,7 +1,7 @@
-import React from 'react'
-import {Button} from 'react-native-paper'
+import React from './node_modules/react'
+import {Button} from './node_modules/react-native-paper'
 
-export default ({label, color, style, mode,  zeroMargin, onPress, loading ,contentStyle, ...other}) => {    
+export default ({label, color, style, mode,  zeroMargin, onPress, loading ,contentStyle, ...other}) => {
     return(
         <Button
             style={[{ marginTop: zeroMargin ? 0 : 20 } , style]}
@@ -16,4 +16,3 @@ export default ({label, color, style, mode,  zeroMargin, onPress, loading ,conte
         </Button>
     )
 }
-

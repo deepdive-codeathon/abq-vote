@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useState } from "./node_modules/react";
 import {
   View,
   ActivityIndicator,
   Text,
   TouchableNativeFeedback
 } from "react-native";
-import { useRef, useImperativeHandle, forwardRef } from "react";
-import { Container } from "../Components";
-import { Button } from "react-native-paper";
-import Modal from "react-native-modal";
+import { useRef, useImperativeHandle, forwardRef } from "./node_modules/react";
+import { Container } from ".";
+import { Button } from "./node_modules/react-native-paper";
+import Modal from "./node_modules/react-native-modal";
 import metrics from "../Themes/Metrics";
 import viewStyles from "../Styles/ViewStyles";
 import colors from "../Themes/Colors";
