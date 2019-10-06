@@ -1,50 +1,28 @@
-// /**
-//  * @format
-//  */
-
-// import {AppRegistry} from 'react-native';
-// import Root from './src/src';
-// import {YellowBox} from 'react-native';
-// // import App from "./src605";
-
-// import {name as appName} from './src/app.json';
-
-// YellowBox.ignoreWarnings([
-//   'Require cycle:',
-//   'Remote debugger',
-//   'Accessing view manager configs',
-//   'Warning: componentWillReceiveProps',
-//   'Warning: componentWillMount',
-// ]);
-
-// // import "./debugmodules";
-// console.ignoredYellowBox = ['Require cycle: node_modules/react-native-paper'];
-// AppRegistry.registerComponent(appName, () => App);
 import React from 'react';
 import {StatusBar} from 'react-native';
 import {StoreProvider} from 'easy-peasy';
 import {Provider as PaperProvider} from 'react-native-paper';
 
-import {APP_PREFIX} from './src/config/index';
+import {APP_PREFIX} from './config/index';
 
-import NavigationService from './src/navigation';
-import createStore from './src/store';
-import PrimaryNav from './src/navigation/AppNavigation';
+import NavigationService from './navigation';
+import createStore from './store';
+import PrimaryNav from './navigation/AppNavigation';
 
-import {ThemeProvider} from './src/themes/Context/ThemeContext';
-import {AppContextProvider} from './src/services/Auth/AppContext';
-import {LocaleContextProvider} from './src/i18n/LocaleContext';
-import {NetInfoProvider} from './src/lib/NetInfo/Context';
+import {ThemeProvider} from './themes/Context/ThemeContext';
+import {AppContextProvider} from './services/Auth/AppContext';
+import {LocaleContextProvider} from './i18n/LocaleContext';
+import {NetInfoProvider} from './lib/NetInfo/Context';
 
-import {Screen} from './src/components';
-import useTheme from './src/themes/Context';
-import useTranslation from './src/i18n';
+import {Screen} from './components';
+import useTheme from './themes/Context';
+import useTranslation from './i18n';
 // import {gestureHandlerRootHOC} from 'react-native-gesture-handler';
 //create the easy store
 const store = createStore();
 
 //return root component
-const App = () => {
+const Root = () => {
   return (
     <Screen>
       <NetInfoProvider>
@@ -80,4 +58,4 @@ const ThemeConsumer = props => {
 
 //temp workaround for react-native-gesture-handler in react-native 0.61
 // take a look https://github.com/react-native-community/releases/issues/140#issuecomment-532819601
-export default App;
+export default Root;
