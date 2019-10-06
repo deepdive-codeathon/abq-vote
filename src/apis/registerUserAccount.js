@@ -1,5 +1,4 @@
 import {Constants, Permissions, Notifications} from 'expo';
-import crypto from 'crypto';
 // Example server, implemented in Rails: https://git.io/vKHKv
 const PUSH_ENDPOINT = 'https://test.devv.io/register';
 

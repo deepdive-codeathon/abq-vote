@@ -55,7 +55,7 @@ function getHomeIcon({focused, horizontal, tintColor}) {
     <IconX
       style={{marginBottom: 5}}
       origin={ICON_TYPE.OCTICONS}
-      name={'map'}
+      name={'location'}
       color={tintColor}
     />
   );
