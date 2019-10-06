@@ -1,9 +1,9 @@
 {
   "packagerPort": 19001,
-  "packagerPid": 19884,
+  "packagerPid": 17304,
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "expoServerNgrokUrl": "https://rd-f6g.anonymous.abq-vote.exp.direct",
   "packagerNgrokUrl": "https://packager.rd-f6g.anonymous.abq-vote.exp.direct",
-  "ngrokPid": 9980
+  "ngrokPid": 9316
 }
