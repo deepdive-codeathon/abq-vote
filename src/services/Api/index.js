@@ -39,6 +39,8 @@ const createApiClient = (baseURL = BASE_URL) => {
     setAuthorizationHeader,
     // checkAppVersion,
     loginUser,
+    logoutUser,
+    
   };
 };
 

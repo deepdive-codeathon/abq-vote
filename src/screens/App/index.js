@@ -6,7 +6,6 @@ import {Container, ButtonX} from '../../components';
 import NavigationStyles from '../../styles/NavigationStyles';
 import useAuth from '../../services/Auth';
 import useTheme from '../../themes/Context';
-import useTranslation from '../../i18n';
 
 const MainScreen = ({navigation}) => {
   const {logout} = useAuth();
@@ -20,17 +19,10 @@ const MainScreen = ({navigation}) => {
           padding: 20,
         }}>
         <Text style={{fontSize: 24, color: theme.colors.primary}}>
-          {t('welcome')}
+          {'welcome'}
         </Text>
 
-        <ButtonX dark={true} label={t('logout')} onPress={logout} />
-
-        <ButtonX
-          dark={true}
-          mode="outline"
-          label={t('change_locale')}
-          onPress={_changeLocale}
-        />
+        <ButtonX dark={true} label={'logout'} onPress={logout} />
       </Container>
     </LoadingActionContainer>
   );
