@@ -64,7 +64,7 @@ export default () => {
               marginTop: 60,
               marginBottom: 20,
             }}>
-            {t('welcome')}
+            {'welcome'}
           </Text>
           <Text
             style={{
@@ -115,7 +115,7 @@ export default () => {
             dark={true}
             color={loading ? theme.colors.accent : theme.colors.primary}
             onPress={loginUser}
-            label={t('login')}
+            label={'login'}
           />
 
           <ButtonX

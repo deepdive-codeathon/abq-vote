@@ -6,40 +6,7 @@ import {Container, ButtonX} from '../../components';
 import NavigationService from '../../navigation/index';
 import Routes from '../../navigation/Routes/index';
 import AppIntroSlider from '../../lib/AppIntroSlider';
-import useTranslation from '../../i18n/index';
-import {LOCALES} from '../../constants/index';
 import colors from '../../themes/Colors';
-
-const LanguageSlideItem = props => {
-  const {t, localeProvider, changeLocale} = useTranslation();
-
-  const _changeLocale = () => {
-    changeLocale(
-      localeProvider.id == LOCALES.ENGLISH.id
-        ? LOCALES.ENGLISH
-        : LOCALES.SPANISH,
-    );
-  };
-
-  return (
-    <View style={{padding: 20}}>
-      <Text
-        style={{
-          fontSize: 16,
-          color: 'rgba(255,255,255,0.6)',
-        }}>
-        {t('selectLanguage')}
-      </Text>
-      <ButtonX
-        dark={true}
-        mode="outlined"
-        color="white"
-        label={localeProvider.label}
-        onPress={_changeLocale}
-      />
-    </View>
-  );
-};
 
 const slides = [
   {

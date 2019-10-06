@@ -30,19 +30,18 @@ const MainScreen = ({navigation}) => {
 };
 
 MainScreen.navigationOptions = ({navigation, screenProps}) => {
-  const {t, theme} = screenProps;
+  const {theme} = screenProps;
   return {
     headerStyle: [
       NavigationStyles.header_statusBar,
       {backgroundColor: theme.colors.header},
     ],
-    headerTitle: t('home'),
+    headerTitle: 'home',
     headerTintColor: theme.colors.headerTitle,
     headerTitleStyle: [
       NavigationStyles.headerTitle,
       {color: theme.colors.headerTitle},
     ],
-    
   };
 };
 
