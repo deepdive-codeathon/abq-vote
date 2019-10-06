@@ -34,8 +34,8 @@ export default () => {
   };
 
   const {username, password, status} = useStoreState(state => ({
-    username: state.login.username,
-    password: state.login.password,
+    user: state.login.username,
+    pass: state.login.password,
     status: state.login.status,
   }));
 

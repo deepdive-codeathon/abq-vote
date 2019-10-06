@@ -6,6 +6,7 @@ import {Container, ButtonX, HeaderButton} from '../../components';
 import NavigationStyles from '../../styles/NavigationStyles';
 import NavigationService from '../../navigation';
 import useTheme from '../../themes/Context';
+import useAuth from '../../'
 
 const MainScreen = ({navigation}) => {
   const {theme} = useTheme();
