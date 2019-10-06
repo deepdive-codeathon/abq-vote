@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
-import MapView from 'react-native-maps';
+import MapView, { Marker } from 'react-native-maps';
 import fetchVotingLocations from '../apis/fetchVotingLocations'
 
 export default class MapScreen extends React.Component {
@@ -12,30 +12,38 @@ export default class MapScreen extends React.Component {
                 longitude: -106.6504,
                 latitudeDelta: 0.0922,
                 longitudeDelta: 0.0421,},
-            locations: []
+            locations: [],
+            test: '',
         }
     }
 
     componentDidMount() {
         fetchVotingLocations().then(response => response.json()
-        .then(jsonData => this.setState({jsonData}))
+        .then(jsonData => this.setState({locations : jsonData["features"]}))
         , fail=>console.log(fail))
     }
 
+    stupidFucntion(locations) {
+        markers = []
+        for (let i = 0; i < locations.length; i++) {
+            markers.push(
+            <Marker
+                coordinate={{
+                    latitude: locations[i]["geometry"]["y"],
+                    longitude: locations[i]["geometry"]["x"]}}
+                title={locations[i]["attributes"]["name"]}/>)
+        }
+        return markers;
+    }
+
     render() {
+    let locations = this.state.locations
     return (
             <MapView style={styles.map}
             initialRegion={this.state.viewingRegion}>
-            {/* {this.state.locations.array.forEach(element => {
-                console.log(element)
-            })} */}
-            {/* {locations.array.map(marker => {
-                    console.log(marker)
-                    // <Marker
-                    //     coordinate={{element}["geometry"]}
-                    //     title={{element}["attributes"]["name"]}
-                    // />
-                })} */}
+            {console.log(locations.length)}
+            {this.stupidFucntion(locations)}
+            {console.log("goodbye")}
             </MapView>
         );
     }
