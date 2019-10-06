@@ -8,7 +8,6 @@ import LaunchScreen from '../screens/Launch';
 // Screens Objects
 import LoginStack from './LoginStack';
 import MainStack from './MainStack';
-import AppUpdate from '../screens/AppUpdate';
 
 const Root = {screen: LaunchScreen};
 
@@ -44,11 +43,6 @@ const ModalNav = createStackNavigator(
     Main: {
       screen: PrimaryNav,
       path: 'app',
-    },
-
-    AppUpdate: {
-      screen: AppUpdate,
-      path: 'update',
     },
   },
   {
