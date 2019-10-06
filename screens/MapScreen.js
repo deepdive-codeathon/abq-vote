@@ -23,11 +23,12 @@ export default class MapScreen extends React.Component {
         , fail=>console.log(fail))
     }
 
-    stupidFucntion(locations) {
+    populateMapMarkers(locations) {
         markers = []
         for (let i = 0; i < locations.length; i++) {
             markers.push(
             <Marker
+                key={i}
                 coordinate={{
                     latitude: locations[i]["geometry"]["y"],
                     longitude: locations[i]["geometry"]["x"]}}
@@ -41,9 +42,7 @@ export default class MapScreen extends React.Component {
     return (
             <MapView style={styles.map}
             initialRegion={this.state.viewingRegion}>
-            {console.log(locations.length)}
-            {this.stupidFucntion(locations)}
-            {console.log("goodbye")}
+            {this.populateMapMarkers(locations)}
             </MapView>
         );
     }
