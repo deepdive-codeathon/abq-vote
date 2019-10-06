@@ -4,7 +4,6 @@ import {Text, View} from 'react-native';
 import LoadingActionContainer from '../../components/LoadingActionContainer';
 import {Container, ButtonX, HeaderButton} from '../../components';
 import NavigationStyles from '../../styles/NavigationStyles';
-import NavigationService from '../../navigation';
 import useAuth from '../../services/Auth';
 import useTheme from '../../themes/Context';
 import * as WebBrowser from 'expo-web-browser';
@@ -13,15 +12,6 @@ import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 
 const MainScreen = ({navigation}) => {
   const {theme} = useTheme();
-
-  const _toggleDrawer = props => {
-    NavigationService.openDrawer();
-  };
-
-  useEffect(() => {
-    navigation.setParams({openDrawer: _toggleDrawer});
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <LoadingActionContainer fixed>

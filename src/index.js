@@ -11,8 +11,6 @@ import PrimaryNav from './navigation/AppNavigation';
 
 import {ThemeProvider} from './themes/Context/ThemeContext';
 import {AppContextProvider} from './services/Auth/AppContext';
-import {LocaleContextProvider} from './i18n/LocaleContext';
-import {NetInfoProvider} from './lib/NetInfo/Context';
 
 import {Screen} from './components';
 import useTheme from './themes/Context';
@@ -25,16 +23,12 @@ const store = createStore();
 const Root = () => {
   return (
     <Screen>
-      <NetInfoProvider>
-        <LocaleContextProvider>
-          <StoreProvider store={store}>
-            <StatusBar translucent backgroundColor={'rgba(0,0,0,0.2)'} />
-            <ThemeProvider>
-              <ThemeConsumer />
-            </ThemeProvider>
-          </StoreProvider>
-        </LocaleContextProvider>
-      </NetInfoProvider>
+      <StoreProvider store={store}>
+        <StatusBar translucent backgroundColor={'rgba(0,0,0,0.2)'} />
+        <ThemeProvider>
+          <ThemeConsumer />
+        </ThemeProvider>
+      </StoreProvider>
     </Screen>
   );
 };

@@ -75,7 +75,7 @@ export default () => {
               color: theme.colors.primary,
               marginBottom: 20,
             }}>
-            react-native-easy-starter
+            🗳 ABQ VOTE 🗳
           </Text>
         </Section>
         <Section>

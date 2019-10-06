@@ -59,10 +59,6 @@ function navigateAndReset(routeName, params) {
   );
 }
 
-function toggleDrawer() {
-  navigator.dispatch(DrawerActions.toggleDrawer());
-}
-
 function openDrawer() {
   navigator.dispatch(DrawerActions.openDrawer());
 }
@@ -73,7 +69,6 @@ function closeDrawer() {
 
 const NavigationService = {
   navigate,
-  toggleDrawer,
   openDrawer,
   closeDrawer,
   navigateAndReset,

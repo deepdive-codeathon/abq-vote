@@ -24,13 +24,13 @@ const checkLogin = thunk(async (actions, payload, {dispatch, injections}) => {
 });
 
 const loginUser = thunk(async (actions, payload, {dispatch}) => {
-  if (!payload.username || !payload.password) {
+  if (!payload.username || !payload.pass) {
     return;
   }
   actions.updateStatus(STATUS.FETCHING);
   // let response = await ApiService.loginUser(payload);
 
-  let response = await setLoginCredentials(payload.username, payload.password);
+  let response = await setLoginCredentials(payload.user, payload.pass);
 
   //mocking api
   setTimeout(() => {

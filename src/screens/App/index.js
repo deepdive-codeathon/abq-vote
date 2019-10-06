@@ -7,7 +7,6 @@ import NavigationStyles from '../../styles/NavigationStyles';
 import useAuth from '../../services/Auth';
 import useTheme from '../../themes/Context';
 import useTranslation from '../../i18n';
-import {LOCALES} from '../../constants/index';
 
 const MainScreen = ({navigation}) => {
   const {logout} = useAuth();
